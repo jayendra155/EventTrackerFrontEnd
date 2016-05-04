@@ -3,7 +3,7 @@
  */
 (function() {
 
-	var app = angular.module("EventTracker", [ "ngRoute" ]);
+	var app = angular.module("EventTracker", [ 'ngRoute' ]);
 
 	app.config(function($routeProvider) {
 		$routeProvider
