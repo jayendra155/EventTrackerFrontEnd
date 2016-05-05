@@ -7,7 +7,10 @@
 
 	app.config(function($routeProvider) {
 		$routeProvider
-		
+		.when("login" || 'signin',{
+			templateUrl: "login.html",
+			controller: "LoginController"
+		})
 		.when("/main", {
 			templateUrl : "pages/hello.html",
 			controller : "HelloController"
