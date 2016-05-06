@@ -3,6 +3,8 @@
  */
 var app=angular.module("EventTracker");
 var LoginController=function($scope){
-	$scope.appName
+	console.log("LoginController");
+	$scope.appName="Event Tracker";
+	console.log($scope);
 }
 app.controller("LoginController",LoginController);

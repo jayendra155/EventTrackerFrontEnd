@@ -8,7 +8,7 @@
 	app.config(function($routeProvider) {
 		$routeProvider
 		.when("login" || 'signin',{
-			templateUrl: "login.html",
+			templateUrl: "pages/login.html",
 			controller: "LoginController"
 		})
 		.when("/main", {
