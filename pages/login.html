@@ -5,18 +5,18 @@
         <div class="col-lg-6">
             <div class="well well-md">
                 <center>
-                    <form action="" method="GET">
+                    <form name="loginForm">
                         <div class="page-header">
                             <h2><p class="text-primary">Welcome to {{ appName }}</h2></p>
                         </div>
                         <h4> <p class="text-secondary">Please login to continue</p></h4>
                         <div class="form-group">
-                            <input type="text" name="username" value="" placeholder="Enter your user name" class="form-control btn-lg">
+                            <input type="text" name="username" value="" placeholder="Enter your user name" class="form-control btn-lg" ng-model="user.username">
                             <br>
-                            <input type="password" name="password" value="" placeholder="Enter the password" class="form-control btn-lg">
+                            <input type="password" name="password" value="" placeholder="Enter the password" class="form-control btn-lg" ng-model="user.password">
                             <br>
                             <div class="btn-group-vertical btn-block">
-                                <input type="submit" name="submit" class="btn-primary btn-lg btn-block active" value="Login">
+                                <button type="submit" name="submit" class="btn-primary btn-lg btn-block active" value="Login" ng-click="register()">Login</button>
                                 <br>
                                 <p class="text-info">Not a user? </p>
                                 <button type="button" class="btn-primary btn-block btn-md ">Register now</button>

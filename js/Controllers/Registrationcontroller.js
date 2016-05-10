@@ -1,13 +1,9 @@
-/**
- * http://usejsdoc.org/
- */
 var app=angular.module("EventTracker");
-var LoginController=function($scope,$http,$location){
+var RegistrationController=function($scope,$http,$location){
 	console.log("LoginController");
 	console.log(JSON.stringify($scope.user))
 	$scope.appName="Event Tracker";
 	console.log($scope);
-	console.log($location);
 	$scope.register=function(){
 		$http.get("http://localhost:8081/EventTracker/register.html?username="+$scope.user.username+"&password="+$scope.user.password)
 		.then(function success(result){
@@ -17,4 +13,4 @@ var LoginController=function($scope,$http,$location){
 		});
 	}
 }
-app.controller("LoginController",LoginController);
+app.controller("RegistrationController",RegistrationController);
