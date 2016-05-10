@@ -5,7 +5,7 @@ var app = angular.module("EventTracker");
 var HelloController = function($scope,$http) {
 	$scope.registerEvent=function(){
 		console.log($scope.events);
-		$http.post('http://localhost:8080/EventTracker/demo.html', $scope.events)
+		$http.post('http://localhost:8081/EventTracker/demo.html', $scope.events)
 		.success(function(msg){
 			if(msg==="true")
 				console.log("data sent");
