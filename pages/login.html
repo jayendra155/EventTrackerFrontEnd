@@ -1,29 +1,35 @@
-<div class="row">
-        <div class="col-lg-3">
 
-        </div>
-        <div class="col-lg-6">
-            <div class="well well-md">
-                <center>
-                    <form name="loginForm">
-                        <div class="page-header">
-                            <h2><p class="text-primary">Welcome to {{ appName }}</h2></p>
-                        </div>
-                        <h4> <p class="text-secondary">Please login to continue</p></h4>
-                        <div class="form-group">
-                            <input type="text" name="username" value="" placeholder="Enter your user name" class="form-control btn-lg" ng-model="user.username">
-                            <br>
-                            <input type="password" name="password" value="" placeholder="Enter the password" class="form-control btn-lg" ng-model="user.password">
-                            <br>
-                            <div class="btn-group-vertical btn-block">
-                                <button type="submit" name="submit" class="btn-primary btn-lg btn-block active" value="Login" ng-click="register()">Login</button>
-                                <br>
-                                <p class="text-info">Not a user? </p>
-                                <button type="button" class="btn-primary btn-block btn-md ">Register now</button>
-                            </div>
-                        </div>
-                        <br>
-                    </form>
-                </center>
-            </div>
-        </div>
+
+
+<div class="mdl-grid">
+	<div class="mdl-cell mdl-cell--3-col"></div>
+	<div class="mdl-cell mdl-cell--6-col">
+		<center>
+			<form action="#" name="loginForm">
+
+				<div
+					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" id="username"
+						ng-model="user.username"> <label
+						class="mdl-textfield__label" for="username">Username</label>
+				</div>
+				<br>
+				<div
+					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="password" id="password"
+						ng-model="user.password"> <label
+						class="mdl-textfield__label" for="password">Password</label>
+				</div>
+				<br>
+				<button
+					class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+					Login</button>
+				<br> Not a user? <br>
+				<button
+					class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+					Register Now</button>
+			</form>
+		</center>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col"></div>
+</div>
