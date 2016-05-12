@@ -6,7 +6,9 @@
 	<div class="mdl-cell mdl-cell--6-col">
 		<center>
 			<form action="#" name="loginForm">
-
+				<br>
+				<br>
+				<br>
 				<div
 					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<input class="mdl-textfield__input" type="text" id="username"
@@ -14,19 +16,28 @@
 						class="mdl-textfield__label" for="username">Username</label>
 				</div>
 				<br>
+				<br>
 				<div
 					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<input class="mdl-textfield__input" type="password" id="password"
 						ng-model="user.password"> <label
 						class="mdl-textfield__label" for="password">Password</label>
-				</div>
+				</div><br>	
+				<div
+					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+					for="rememberMe">
+				  <input type="checkbox" id="rememberMe"
+					class="mdl-checkbox__input"> <span
+					class="mdl-checkbox__label">Remember me</span>
+				</label></div> <br>
 				<br>
 				<button
 					class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
 					Login</button>
-				<br> Not a user? <br>
+				<br> <br> Not a user? <br>
 				<button
-					class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+					class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="goToSignup()">
 					Register Now</button>
 			</form>
 		</center>

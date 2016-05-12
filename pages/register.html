@@ -1,0 +1,42 @@
+
+
+
+<div class="mdl-grid">
+	<div class="mdl-cell mdl-cell--3-col"></div>
+	<div class="mdl-cell mdl-cell--6-col">
+		<center>
+			<form action="#" name="signupForm">
+				<br>
+				<br>
+				<br>
+				<div
+					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="text" id="username"
+						ng-model="user.username"> <label
+						class="mdl-textfield__label" for="username">Username</label>
+				</div>
+				<div id="userConfirmation"></div>
+				<br>
+				<br>
+				<div
+					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="password" id="password"
+						ng-model="user.password" ng-keyup="checkStrength()"> <label
+						class="mdl-textfield__label" for="password">Password</label>
+				</div><div id="passwordStrength">Weak</div>
+				<br>	
+				<div
+					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="password" id="confirmPassword"
+						disabled > <label
+						class="mdl-textfield__label" for="confirmPassword">Confirm Password</label>
+				</div><div id="confirmPasswordDiv" hidden></div>
+				<br>	
+				<button
+					class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+					Signup</button>
+			</form>
+		</center>
+	</div>
+	<div class="mdl-cell mdl-cell--3-col"></div>
+</div>

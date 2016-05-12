@@ -11,6 +11,10 @@
 			templateUrl: "pages/login.html",
 			controller: "LoginController"
 		})
+		.when("/signup",{
+			templateUrl : "pages/register.html",
+			controller : "RegistrationController"
+		})
 		.when("/main", {
 			templateUrl : "pages/hello.html",
 			controller : "HelloController"

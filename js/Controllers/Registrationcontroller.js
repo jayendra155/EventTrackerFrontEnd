@@ -1,5 +1,12 @@
 var app=angular.module("EventTracker");
-var RegistrationController=function($scope,$http,$location){
+var RegistrationController=function($scope,$http,$location,$timeout){
+//	code snippet to reload DOM starts
+	$scope.$on('$viewContentLoaded', () => {
+		  $timeout(() => {
+		    componentHandler.upgradeAllRegistered();
+		  })
+		});
+//	code snippet to reload DOM ends here
 	console.log("LoginController");
 	console.log(JSON.stringify($scope.user))
 	$scope.appName="Event Tracker";
@@ -12,5 +19,5 @@ var RegistrationController=function($scope,$http,$location){
 			console.log("Registration failed")
 		});
 	}
-}
+};
 app.controller("RegistrationController",RegistrationController);

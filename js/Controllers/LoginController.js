@@ -11,6 +11,9 @@ var LoginController=function($scope,$http,$location,$timeout){
 		  })
 		});
 //	code snippet to reload DOM ends here
+	$scope.goToSignup=function(){
+		$location.path("/signup");
+	}
 	console.log("LoginController");
 	console.log(JSON.stringify($scope.user))
 	$scope.appName="Event Tracker";
@@ -24,5 +27,5 @@ var LoginController=function($scope,$http,$location,$timeout){
 			console.log("Registration failed")
 		});
 	}
-}
+};
 app.controller("LoginController",LoginController);
