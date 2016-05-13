@@ -6,9 +6,7 @@
 	<div class="mdl-cell mdl-cell--6-col">
 		<center>
 			<form action="#" name="signupForm">
-				<br>
-				<br>
-				<br>
+				<br> <br> <br>
 				<div
 					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<input class="mdl-textfield__input" type="text" id="username"
@@ -16,22 +14,30 @@
 						class="mdl-textfield__label" for="username">Username</label>
 				</div>
 				<div id="userConfirmation"></div>
-				<br>
-				<br>
+				<br> <br>
 				<div
-					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id-"passwordCoveringDiv">
 					<input class="mdl-textfield__input" type="password" id="password"
-						ng-model="user.password" ng-keyup="checkStrength()"> <label
+						ng-model="user.password" ng-keyup="checkPassword()"> <label
 						class="mdl-textfield__label" for="password">Password</label>
-				</div><div id="passwordStrength">Weak</div>
-				<br>	
+					<div class="mdl-tooltip" for="password" >
+						Password should have <br>One or more upper case character<br>One or more number
+					</div>
+					
+				</div>
+				<code style="position:absolute;right:35%;" id="passwordStrength">{{passwordStrength}}</code>
+				<br>
 				<div
 					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-					<input class="mdl-textfield__input" type="password" id="confirmPassword"
-						disabled > <label
-						class="mdl-textfield__label" for="confirmPassword">Confirm Password</label>
-				</div><div id="confirmPasswordDiv" hidden></div>
-				<br>	
+					<input class="mdl-textfield__input" type="password"
+						id="confirmPassword" disabled> <label
+						class="mdl-textfield__label" for="confirmPassword">Confirm
+						Password</label>
+				</div>
+				<div id="confirmPasswordDiv" >
+					<span>&#10003;</span>
+				</div>
+				<br>
 				<button
 					class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
 					Signup</button>
