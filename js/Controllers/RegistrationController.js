@@ -29,7 +29,9 @@ var RegistrationController=function($scope,$http,$location,$timeout){
 	         if(/[0-9]/.test(password) ){
 	             if( /[!@#\$%^&*()_]/.test(password))
 	               {
-	            	 	$scope.passwordStrength='\&\#10003 ';
+	            	 	$scope.passwordStrength='&#10003 ';
+	            	 	var pS=document.getElementById('passwordStrength');
+	            	 	pS.className="mdl-color-text--green-800";
 	                    var cP=document.getElementById('confirmPassword');
 	                    cP.disabled=false;
 	               }
@@ -40,6 +42,8 @@ var RegistrationController=function($scope,$http,$location,$timeout){
 	    else
        	 {
 	    	$scope.passwordStrength="Invalid";$scope.passwordStrength="Invalid";
+	    	var pS=document.getElementById('passwordStrength');
+    	 	pS.className="mdl-color-text--red-A700";
 	    	var cP=document.getElementById('confirmPassword');
             cP.disabled=true;
        	 }

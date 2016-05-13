@@ -16,16 +16,19 @@
 				<div id="userConfirmation"></div>
 				<br> <br>
 				<div
-					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label" id-"passwordCoveringDiv">
+					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"id-"passwordCoveringDiv">
 					<input class="mdl-textfield__input" type="password" id="password"
-						ng-model="user.password" ng-keyup="checkPassword()"> <label
-						class="mdl-textfield__label" for="password">Password</label>
-					<div class="mdl-tooltip" for="password" >
-						Password should have <br>One or more upper case character<br>One or more number
+						ng-model="user.password" ng-keyup="checkPassword()">
+					<code style="position: absolute; right: 35%;"
+						class="mdl-color-text--red-A700" id="passwordStrength">{{passwordStrength}}</code>
+					<label class="mdl-textfield__label" for="password">Password</label>
+					<div class="mdl-tooltip" for="password">
+						Password should have <br>One or more upper case character<br>One
+						or more number
 					</div>
-					
+
 				</div>
-				<code style="position:absolute;right:35%;" id="passwordStrength">{{passwordStrength}}</code>
+
 				<br>
 				<div
 					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
@@ -34,7 +37,7 @@
 						class="mdl-textfield__label" for="confirmPassword">Confirm
 						Password</label>
 				</div>
-				<div id="confirmPasswordDiv" >
+				<div id="confirmPasswordDiv">
 					<span>&#10003;</span>
 				</div>
 				<br>
