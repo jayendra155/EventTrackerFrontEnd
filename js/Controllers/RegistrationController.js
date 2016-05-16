@@ -39,14 +39,26 @@ var RegistrationController=function($scope,$http,$location,$timeout){
 	     }
 	         
 	    }
-	    else
+	    else 
        	 {
-	    	$scope.passwordStrength="Invalid";$scope.passwordStrength="Invalid";
+	    	$scope.passwordStrength="Invalid";
 	    	var pS=document.getElementById('passwordStrength');
     	 	pS.className="mdl-color-text--red-A700";
 	    	var cP=document.getElementById('confirmPassword');
             cP.disabled=true;
        	 }
+	}
+	$scope.confirmPassword=function(){
+		var password=document.getElementById('password').value;
+		var confirmPasswordElement=document.getElementById('confirmPassword');
+		$scope.confirmPasswordMatch="";
+		if(confirmPasswordElement.value === password)
+			 {
+			confirmPasswordStrength.className= "mdl-color-text--green-800";
+			
+			 }
+		else 
+			confirmPasswordStrength.className="mdl-color-text--red-A700";
 	}
 };
 app.controller("RegistrationController",RegistrationController);

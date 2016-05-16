@@ -13,35 +13,44 @@
 						ng-model="user.username"> <label
 						class="mdl-textfield__label" for="username">Username</label>
 				</div>
-				<div id="userConfirmation"></div>
-				<br> <br>
+				<div hidden id="userConfirmation"></div>
+				<br>
 				<div
-					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"id-"passwordCoveringDiv">
+					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+					<input class="mdl-textfield__input" type="email" id="email"
+						ng-model="user.email"> <label class="mdl-textfield__label"
+						for="email">Email</label>
+				</div>
+				<br>
+				<div
+					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
+					id="passwordCoveringDiv">
 					<input class="mdl-textfield__input" type="password" id="password"
 						ng-model="user.password" ng-keyup="checkPassword()">
 					<code style="position: absolute; right: 35%;"
 						class="mdl-color-text--red-A700" id="passwordStrength">{{passwordStrength}}</code>
 					<label class="mdl-textfield__label" for="password">Password</label>
 					<div class="mdl-tooltip" for="password">
-						Password should have <br>One or more upper case character<br>One
-						or more number
+						<strong>Password should have <br>One or more upper
+							case character<br>One or more number<br>One or more
+							special character<br>Length should be between 8-16
+							characters
+						</strong>
 					</div>
-
 				</div>
-
 				<br>
 				<div
 					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<input class="mdl-textfield__input" type="password"
-						id="confirmPassword" disabled> <label
-						class="mdl-textfield__label" for="confirmPassword">Confirm
+						id="confirmPassword" disabled ng-keyup="confirmPassword()">
+					<code style="position: absolute; right: 35%;"
+						class="mdl-color-text--red-A700" id="confirmPasswordStrength">{{confirmPasswordMatch}}</code>
+					
+					<label class="mdl-textfield__label" for="confirmPassword">Confirm
 						Password</label>
 				</div>
-				<div id="confirmPasswordDiv">
-					<span>&#10003;</span>
-				</div>
-				<br>
-				<button
+				<br> <br>
+				<button ng-disabled="signupForm.$invalid"
 					class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
 					Signup</button>
 			</form>
