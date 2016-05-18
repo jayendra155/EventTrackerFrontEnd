@@ -10,7 +10,7 @@
 				<div
 					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<input class="mdl-textfield__input" type="text" id="username"
-						ng-model="user.username"> <label
+						ng-model="user.username" ng-required="true"> <label
 						class="mdl-textfield__label" for="username">Username</label>
 				</div>
 				<div hidden id="userConfirmation"></div>
@@ -18,7 +18,7 @@
 				<div
 					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<input class="mdl-textfield__input" type="email" id="email"
-						ng-model="user.email"> <label class="mdl-textfield__label"
+						ng-model="user.email" ng-required="true"> <label class="mdl-textfield__label"
 						for="email">Email</label>
 				</div>
 				<br>
@@ -26,7 +26,7 @@
 					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label"
 					id="passwordCoveringDiv">
 					<input class="mdl-textfield__input" type="password" id="password"
-						ng-model="user.password" ng-keyup="checkPassword()">
+						ng-model="user.password" ng-keyup="checkPassword()" ng-required="true">
 					<code style="position: absolute; right: 35%;"
 						class="mdl-color-text--red-A700" id="passwordStrength">{{passwordStrength}}</code>
 					<label class="mdl-textfield__label" for="password">Password</label>
@@ -42,7 +42,7 @@
 				<div
 					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<input class="mdl-textfield__input" type="password"
-						id="confirmPassword" disabled ng-keyup="confirmPassword()">
+						id="confirmPassword" ng-required="true" disabled ng-keyup="confirmPassword()">
 					<code style="position: absolute; right: 35%;"
 						class="mdl-color-text--red-A700" id="confirmPasswordStrength">{{confirmPasswordMatch}}</code>
 					

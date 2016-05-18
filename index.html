@@ -16,8 +16,13 @@
 <script type="text/javascript" src="./js/Controllers/HelloController.js"></script>
 <script type="text/javascript" src="./js/Controllers/HomeController.js"></script>
 <script type="text/javascript" src="./js/Controllers/LoginController.js"></script>
-<script type="text/javascript" src="./js/Controllers/RegistrationController.js"></script>
-
+<script type="text/javascript" src="./js/Controllers/LogoutController.js"></script>
+<script type="text/javascript"
+	src="./js/Controllers/RegistrationController.js"></script>
+<script type="text/javascript"
+	src="./js/Controllers/ProfileController.js"></script>
+<script type="text/javascript"
+	src="./js/Service/AuthenticationService.js"></script>
 <script type="text/javascript" src="./js/Service/SignupService.js"></script>
 <body ng-app="EventTracker">
 	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
@@ -27,15 +32,15 @@
 				<span class="mdl-layout-title">Event Tracker</span>
 				<div class="mdl-layout-spacer"></div>
 				<nav class="mdl-navigation mdl-layout--large-screen-only">
-					<a class="mdl-navigation__link" href="">Contact us</a> <a
-						class="mdl-navigation__link" href="">About</a>
+					<a class="mdl-navigation__link" id='link_1' href="">Contact us</a>
+					<a class="mdl-navigation__link" href="">About</a>
 				</nav>
 			</div>
 		</header>
 		<div class="mdl-layout__drawer">
 			<span class="mdl-layout-title">Event Tracker</span>
 			<nav class="mdl-navigation">
-				<a class="mdl-navigation__link" href="/EventTrackerFrontEnd/#/login">Login</a>
+				<a class="mdl-navigation__link" ng-href="./#{{'/login'}}">Login</a>
 				<a class="mdl-navigation__link" href="">Profile</a> <a
 					class="mdl-navigation__link" href="">Logout</a>
 			</nav>
@@ -45,17 +50,21 @@
 			<div ng-view></div>
 		</div>
 		</main>
+
+
+
+
 		<footer class="mdl-mini-footer">
-		<div class="mdl-mini-footer__left-section">
-			<div class="mdl-logo">Event Tracker</div>
-			<ul class="mdl-mini-footer__link-list">
-				<li><a href="#">Help</a></li>
-				<li><a href="#">Privacy & Terms</a></li>
-			</ul>
-		</div>
-	</footer>
+			<div class="mdl-mini-footer__left-section">
+				<div class="mdl-logo">Event Tracker</div>
+				<ul class="mdl-mini-footer__link-list">
+					<li><a href="#">Help</a></li>
+					<li><a href="#">Privacy & Terms</a></li>
+				</ul>
+			</div>
+		</footer>
 	</div>
 
-	
+
 </body>
 </html>

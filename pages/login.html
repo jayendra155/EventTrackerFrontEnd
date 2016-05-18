@@ -6,40 +6,39 @@
 	<div class="mdl-cell mdl-cell--6-col">
 		<center>
 			<form action="#" name="loginForm">
-				<br>
-				<br>
-				<br>
+				<br> <br>
 				<div
 					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<input class="mdl-textfield__input" type="text" id="username"
-						ng-model="user.username"> <label
+						ng-model="user.username" ng-required='true'> <label
 						class="mdl-textfield__label" for="username">Username</label>
 				</div>
-				<br>
-				<br>
+				<br> 
 				<div
 					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
 					<input class="mdl-textfield__input" type="password" id="password"
-						ng-model="user.password"> <label
+						ng-model="user.password" ng-required='true'> <label
 						class="mdl-textfield__label" for="password">Password</label>
-				</div><br>	
+				</div>
+				<br>
 				<div
 					class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-				<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
-					for="rememberMe">
-				  <input type="checkbox" id="rememberMe"
-					class="mdl-checkbox__input"> <span
-					class="mdl-checkbox__label">Remember me</span>
-				</label></div> <br>
-				<br>
-				<button
-					class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
-					Login</button>
-				<br> <br> Not a user? <br>
-				<button
-					class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" ng-click="goToSignup()">
-					Register Now</button>
+					<label class="mdl-checkbox mdl-js-checkbox mdl-js-ripple-effect"
+						for="rememberMe"> <input type="checkbox" id="rememberMe"
+						class="mdl-checkbox__input"> <span
+						class="mdl-checkbox__label">Remember me</span>
+					</label>
+				</div>
+				<br> <br>
+				<input type="submit"
+					class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent"
+					ng-click="login()" value="Login">
 			</form>
+			<br> <br> Not a user? <br>
+			<button
+				class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored"
+				ng-href="./#{{'/signup'}}">Register Now</button>
+
 		</center>
 	</div>
 	<div class="mdl-cell mdl-cell--3-col"></div>
