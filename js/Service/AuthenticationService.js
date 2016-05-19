@@ -7,7 +7,11 @@ app.factory("AuthenticationService", function() {
 			user=aUser;
 		},
 		isLoggedIn : function() {
-			return(user)?user:false;
+			// return(user)?user:false;
+			if(!user)
+				return false;
+			else
+				return user;
 		}
 	}
 });

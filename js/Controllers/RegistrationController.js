@@ -12,11 +12,12 @@ var RegistrationController=function($scope,$http,$location,$timeout){
 	$scope.appName="Event Tracker";
 	console.log($scope);
 	$scope.register=function(){
-		$http.get("http://localhost:8082/EventTracker/register.html?username="+$scope.user.username+"&password="+$scope.user.password)
+		// $http.post("http://eventtracker.cfapps.io/register.html",$scope.user)
+		$http.post("http://localhost:8081/EventTracker/register.html",$scope.user)
 		.then(function success(result){
 			console.log("User registered")
-		},function failure(){
-			console.log("Registration failed")
+		},function failure(reason){
+			console.log("Registration failed \t" + JSON.stringify(reason))
 		});
 	}
 	
